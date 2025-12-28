@@ -15,6 +15,8 @@ jobs:
           NOMBRE: Juan
   saludo-secreto:
     runs-on: ubuntu-latest
+      env:
+        SALUDO: Hola
     steps:
       - name: Saludar con secreto
         run: echo "$SALUDO, ${{vars.NOMBRE}}. Tu contraseña es ${{secrets.CONTRASENA}}"
